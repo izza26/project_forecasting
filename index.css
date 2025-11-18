@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f0f2f5;
+    color: #333;
+}
+
+/* SIDE BAR */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: #2b3e50;
+    position: fixed;
+    padding-top: 20px;
+    color: white;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.sidebar-judul {
+    display: flex; /* Menggunakan Flexbox untuk mensejajarkan logo dan teks */
+    align-items: center; /* Pusatkan vertikal */
+    justify-content: left; /* Pusatkan horizontal */
+    gap: 10px; /* Jarak antara logo dan teks */
+    /* ... Properti h2 yang sudah ada ... */
+    text-align: center; 
+    margin-bottom: 25px;
+    margin-left: 5px;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.logo-utm {
+    height: 30px; /* Atur tinggi logo agar sesuai dengan font-size 20px */
+    width: 30px; /* Jaga rasio aspek */
+}
+
+/* 1. Atur padding dasar */
+.sidebar a {
+    display: block;
+    padding: 12px 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+.sidebar a:hover {
+    background: #1a252f;
+}
+
+/* 2. Tampilan untuk link yang sedang aktif */
+.sidebar a.active {
+    background: #4a6984; /* Warna latar belakang aktif */
+    font-weight: bold;
+    color: #fff; /* Pastikan teks tetap putih */
+    
+    /* GARIS TEBAL DI KIRI */
+    border-left: 5px solid #ffcc00; 
+    
+    /* PENYESUAIAN PADDING KRITIS */
+    /* Padding kiri dikurangi 5px agar total padding tetap 20px */
+    padding-left: 15px; 
+    
+    /* Pastikan padding atas, bawah, dan kanan tetap sama */
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 20px;
+}
+
+/* CONTENT */
+.content {
+    margin-left: 250px;
+    padding: 30px 40px;
+}
+
+/* TITLE */
+.judul {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.subjudul {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+/* BOX */
+.box {
+    background: #ffffff;
+    padding: 22px 25px;
+    border-radius: 10px;
+    margin-bottom: 28px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.box h2 {
+    margin-top: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #2b3e50;
+    margin-bottom: 12px;
+}
+
+.box p {
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 0;
+}

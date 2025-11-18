@@ -1,0 +1,246 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f0f2f5;
+    color: #333;
+}
+
+/* ===================== */
+/* SIDEBAR          */
+/* ===================== */
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: #2b3e50;
+    position: fixed;
+    padding-top: 20px;
+    color: white;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.sidebar-judul {
+    display: flex; /* Menggunakan Flexbox untuk mensejajarkan logo dan teks */
+    align-items: center; /* Pusatkan vertikal */
+    justify-content: left; /* Pusatkan horizontal */
+    gap: 10px; /* Jarak antara logo dan teks */
+    /* ... Properti h2 yang sudah ada ... */
+    text-align: center; 
+    margin-bottom: 25px;
+    margin-left: 5px;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.logo-utm {
+    height: 30px; /* Atur tinggi logo agar sesuai dengan font-size 20px */
+    width: 30px; /* Jaga rasio aspek */
+}
+
+.sidebar a {
+    display: block;
+    padding: 12px 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+.sidebar a:hover {
+    background: #1a252f;
+}
+
+/* Tampilan untuk link yang sedang aktif */
+.sidebar a.active {
+    background: #4a6984; /* Warna latar belakang aktif */
+    font-weight: bold;
+    color: #fff; 
+    
+    /* GARIS TEBAL DI KIRI */
+    border-left: 5px solid #ffcc00; 
+    
+    /* PENYESUAIAN PADDING KRITIS: 20px - 5px = 15px */
+    padding-left: 15px; 
+    
+    /* Pastikan padding lainnya tetap sama */
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 20px;
+}
+
+/* ===================== */
+/* CONTENT        */
+/* ===================== */
+
+.content {
+    margin-left: 250px;
+    padding: 30px 40px;
+}
+
+/* TITLE */
+.judul {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.subjudul {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+/* BOX (Digunakan untuk Tabel dan Konten Umum) */
+.box {
+    background: #ffffff;
+    padding: 22px 25px;
+    border-radius: 10px;
+    margin-bottom: 28px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+
+/* ===================== */
+/* TABEL          */
+/* ===================== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table th {
+    background: #2b3e50;
+    color: white;
+    padding: 12px;
+    text-align: left;
+    font-size: 15px;
+}
+
+table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+
+table tr:hover {
+    background: #f5f7fa;
+}
+
+.forecast-row {
+    background: #fff8e1; /* Warna latar belakang untuk baris forecast */
+    font-style: italic;
+}
+
+
+/* ===================== */
+/* BUTTON CRUD       */
+/* ===================== */
+
+/* Tombol Edit — warna biru */
+.btn-edit {
+    background: #1e90ff; 
+    color: white;
+    padding: 7px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+}
+.btn-edit:hover {
+    background: #187bcd;
+}
+
+/* Tombol Hapus — warna merah solid */
+.btn-delete {
+    background: #e74c3c;
+    color: white;
+    padding: 7px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-left: 5px; /* Tambahkan sedikit margin */
+    font-weight: 600;
+}
+.btn-delete:hover {
+    background: #c0392b;
+}
+
+/* Tombol Batal */
+.btn-cancel {
+    background: #7f8c8d;
+    color: white;
+    padding: 10px 16px; /* Disesuaikan agar sama dengan btn-submit */
+    border-radius: 6px;
+    text-decoration: none;
+    margin-left: 10px;
+    display: inline-block; /* agar bisa disamping button submit */
+    font-weight: 600;
+}
+
+.btn-cancel:hover {
+    background: #707b7c;
+}
+
+
+/* ===================== */
+/* FORM INPUT     */
+/* ===================== */
+
+.form-input { 
+    /* Menggunakan kelas .box sebagai dasar */
+    width: 60%; /* Batasi lebar form */
+    max-width: 500px; /* Tambahkan max-width agar lebih rapi di layar lebar */
+}
+
+form label {
+    display: block;
+    font-weight: 600;
+    margin-top: 12px;
+    color: #2b3e50;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: 0.2s;
+    box-sizing: border-box; /* PENTING: agar padding tidak menambah lebar 100% */
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* Tombol Submit di dalam form */
+.btn-submit { 
+    margin-top: 20px;
+    padding: 10px 16px;
+    background: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+    font-weight: 600;
+}
+
+.btn-submit:hover {
+    background: #27ae60;
+}
